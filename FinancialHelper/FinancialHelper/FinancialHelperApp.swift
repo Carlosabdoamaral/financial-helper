@@ -15,7 +15,23 @@ struct FinancialHelperApp: App {
         WindowGroup {
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            HomeView()
+            TabView {
+                HomeView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "house")
+                            Text("Menu")
+                        }
+                    }
+                
+                SettingsView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "gear")
+                            Text("Ajustes")
+                        }
+                    }
+            }
         }
     }
 }

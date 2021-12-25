@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9806A70F2777822000B2850E /* AddDespesaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806A70E2777822000B2850E /* AddDespesaView.swift */; };
+		9806A7112777856C00B2850E /* AddPoupancaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806A7102777856C00B2850E /* AddPoupancaView.swift */; };
+		9806A7132777869000B2850E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806A7122777869000B2850E /* SettingsView.swift */; };
+		9806A715277787DE00B2850E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806A714277787DE00B2850E /* ProfileView.swift */; };
+		9849B40E2776E81D00A05B38 /* NotificationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849B40D2776E81D00A05B38 /* NotificationListView.swift */; };
+		9849B4102776E88400A05B38 /* NotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849B40F2776E88400A05B38 /* NotificationItem.swift */; };
+		9849B41227776FCE00A05B38 /* SelectTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849B41127776FCE00A05B38 /* SelectTypeView.swift */; };
+		9849B4142777721A00A05B38 /* AddReceitaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849B4132777721A00A05B38 /* AddReceitaView.swift */; };
 		98F9BBB42776D611007B7356 /* FinancialHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F9BBB32776D611007B7356 /* FinancialHelperApp.swift */; };
 		98F9BBB62776D611007B7356 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F9BBB52776D611007B7356 /* ContentView.swift */; };
 		98F9BBB82776D612007B7356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98F9BBB72776D612007B7356 /* Assets.xcassets */; };
@@ -19,6 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9806A70E2777822000B2850E /* AddDespesaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDespesaView.swift; sourceTree = "<group>"; };
+		9806A7102777856C00B2850E /* AddPoupancaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPoupancaView.swift; sourceTree = "<group>"; };
+		9806A7122777869000B2850E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9806A714277787DE00B2850E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		9849B40D2776E81D00A05B38 /* NotificationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListView.swift; sourceTree = "<group>"; };
+		9849B40F2776E88400A05B38 /* NotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItem.swift; sourceTree = "<group>"; };
+		9849B41127776FCE00A05B38 /* SelectTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypeView.swift; sourceTree = "<group>"; };
+		9849B4132777721A00A05B38 /* AddReceitaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceitaView.swift; sourceTree = "<group>"; };
 		98F9BBB02776D611007B7356 /* FinancialHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancialHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F9BBB32776D611007B7356 /* FinancialHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialHelperApp.swift; sourceTree = "<group>"; };
 		98F9BBB52776D611007B7356 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,7 +117,14 @@
 			isa = PBXGroup;
 			children = (
 				98F9BBCB2776D67C007B7356 /* HomeView.swift */,
+				9806A7122777869000B2850E /* SettingsView.swift */,
+				9806A714277787DE00B2850E /* ProfileView.swift */,
 				98F9BBD02776DD0B007B7356 /* FinancialDetailsView.swift */,
+				9849B40D2776E81D00A05B38 /* NotificationListView.swift */,
+				9849B41127776FCE00A05B38 /* SelectTypeView.swift */,
+				9849B4132777721A00A05B38 /* AddReceitaView.swift */,
+				9806A70E2777822000B2850E /* AddDespesaView.swift */,
+				9806A7102777856C00B2850E /* AddPoupancaView.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -110,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				98F9BBCE2776D7CB007B7356 /* FinancialItemHome.swift */,
+				9849B40F2776E88400A05B38 /* NotificationItem.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -184,13 +208,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9806A70F2777822000B2850E /* AddDespesaView.swift in Sources */,
+				9849B4142777721A00A05B38 /* AddReceitaView.swift in Sources */,
 				98F9BBBD2776D612007B7356 /* Persistence.swift in Sources */,
 				98F9BBCF2776D7CB007B7356 /* FinancialItemHome.swift in Sources */,
 				98F9BBD12776DD0B007B7356 /* FinancialDetailsView.swift in Sources */,
+				9849B40E2776E81D00A05B38 /* NotificationListView.swift in Sources */,
+				9806A7112777856C00B2850E /* AddPoupancaView.swift in Sources */,
+				9806A715277787DE00B2850E /* ProfileView.swift in Sources */,
+				9806A7132777869000B2850E /* SettingsView.swift in Sources */,
+				9849B41227776FCE00A05B38 /* SelectTypeView.swift in Sources */,
 				98F9BBC02776D612007B7356 /* FinancialHelper.xcdatamodeld in Sources */,
 				98F9BBB62776D611007B7356 /* ContentView.swift in Sources */,
 				98F9BBCC2776D67C007B7356 /* HomeView.swift in Sources */,
 				98F9BBB42776D611007B7356 /* FinancialHelperApp.swift in Sources */,
+				9849B4102776E88400A05B38 /* NotificationItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
