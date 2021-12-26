@@ -10,7 +10,7 @@ import CoreData
 
 struct HomeView: View {
     
-//    @Environment(\.managedObjectContext) private var homeContext
+    @Environment(\.managedObjectContext) private var homeContext
     
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Receita.value, ascending: true)],
