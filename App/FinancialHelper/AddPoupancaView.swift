@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct AddPoupancaView: View {
+    @Environment(\.managedObjectContext) var moc
+    @StateObject private var dataController = DataController()
+    
     @State private var date : Date = Date()
     @State private var details : String = ""
     @State private var value : String = ""
     
-    func addPoupanca() {print(true)}
+    func addPoupanca() {
+        let financial = Financial(context: moc)
+        financial.data = date
+        financial.id = UUID()
+        financial.parcelas = 0
+        financial.type = "poupanca"
+        financial.value = value
+        financial.desc = details
+        financial.paymentType = ""
+        
+        try? moc.save()
+    }
     
     var body: some View {
         VStack {

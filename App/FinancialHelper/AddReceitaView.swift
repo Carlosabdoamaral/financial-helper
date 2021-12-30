@@ -9,7 +9,9 @@ import SwiftUI
 import CoreData
 
 struct AddReceitaView: View {
-    @Environment(\.managedObjectContext) private var addReceitaContext
+    
+    @Environment(\.managedObjectContext) var moc
+    @StateObject private var dataController = DataController()
     
     @State private var value : String = ""
     @State private var date : Date = Date()
@@ -18,20 +20,18 @@ struct AddReceitaView: View {
     @State private var parcela : Int64 = 0
     @State private var arrParcelas : [Int] = [0]
     
+    
     func addReceita() {
-        withAnimation {
-            let newReceita = Receita(context: addReceitaContext)
-            newReceita.parcela = self.haveParcela
-            newReceita.parcelas = self.parcela
-            newReceita.value = self.value
-            newReceita.date = self.date
-            
-            do {
-                try addReceitaContext.save()
-            } catch {
-                fatalError("Unresolved error")
-            }
-        }
+        let financial = Financial(context: moc)
+        financial.data = date
+        financial.id = UUID()
+        financial.parcelas = parcela
+        financial.type = "receita"
+        financial.value = value
+        financial.desc = details
+        financial.paymentType = ""
+        
+        try? moc.save()
     }
     
     func addParcelas() {
@@ -94,6 +94,7 @@ struct AddReceitaView: View {
                 }
             }
         }
+        .environment(\.managedObjectContext, dataController.container.viewContext)
         .navigationTitle("Receita")
         .onAppear {
             addParcelas()

@@ -9,18 +9,27 @@ import SwiftUI
 
 @main
 struct FinancialHelperApp: App {
-    let persistenceController = PersistenceController.shared
-
+    
+    @StateObject private var dataController = DataController()
+    
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             TabView {
                 HomeView()
+                    .environment(\.managedObjectContext, dataController.container.viewContext)
                     .tabItem {
                         VStack {
                             Image(systemName: "house")
                             Text("Menu")
+                        }
+                    }
+                
+                DashboardView()
+                    .environment(\.managedObjectContext, dataController.container.viewContext)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "square.grid.2x2")
+                            Text("Resumo")
                         }
                     }
                 

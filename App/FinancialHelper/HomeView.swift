@@ -5,18 +5,12 @@
 //  Created by Carlos Amaral on 25/12/21.
 //
 
-import SwiftUI
 import CoreData
+import SwiftUI
 
 struct HomeView: View {
-    
-    @Environment(\.managedObjectContext) private var homeContext
-    
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Receita.value, ascending: true)],
-        animation: .default)
-    private var receitas: FetchedResults<Receita>
-    
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "data", ascending: false)]) var financial : FetchedResults<Financial>
     
     @State private var haveNotification : Bool = false
     @State private var isShowingNotifications : Bool = false
@@ -28,17 +22,32 @@ struct HomeView: View {
                 ScrollView(.vertical) {
                     VStack {
                         
-                        if !receitas.isEmpty {
-                            ForEach(receitas) { receita in
+                        if financial.count != 0{
+                            ForEach(financial) { item in
                                 
-                                NavigationLink(destination: FinancialDetailsView()) {
-                                    FinancialItemHome()
+                                NavigationLink(destination: FinancialDetailsView(value: item.value, type: item.type, data: item.data, desc: item.desc)) {
+                                    FinancialItemHome(type: item.type, value: item.value, data: item.data)
                                 }
+                                
                                 Divider()
                             }
                         } else {
                             Text("Nada por enquanto")
                         }
+                        
+//                        Button("Add") {
+//                            let firstName = ["Carlos", "Anderson", "Rafael", "Jeferson", "Charles"]
+//                            let lastName = ["Alberto", "Cardoso", "Amaral", "Santos"]
+//                            
+//                            let firstSelected = firstName.randomElement()!
+//                            let lastSelected = lastName.randomElement()!
+//                             
+//                            let item = Financial(context: moc)
+//                            item.id = UUID()
+//                            item.value = "\(firstSelected) \(lastSelected)"
+//                            
+//                            try? moc.save()
+//                        }
                     }
                 }
             }

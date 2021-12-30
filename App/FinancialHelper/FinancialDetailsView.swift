@@ -9,7 +9,10 @@ import SwiftUI
 
 struct FinancialDetailsView: View {
     
-    private var value : Double = 226.43
+    public var value : String?
+    public var type : String?
+    public var data : Date?
+    public var desc : String?
     
     var body: some View {
         VStack {
@@ -19,7 +22,7 @@ struct FinancialDetailsView: View {
                     HStack {
                         HStack(spacing: 7) {
                             Text("Valor:")
-                            Text("R$\(value.formatted())")
+                            Text("R$\(value ?? "00.00")")
                                 .fontWeight(.bold)
                         }
                         Spacer()
@@ -28,14 +31,21 @@ struct FinancialDetailsView: View {
                 
                 GroupBox {
                     HStack {
-                        Text("Tipo: ")
+                        Text("Tipo: \(type ?? "Erro")")
                         Spacer()
                     }
                 }
                 
                 GroupBox {
                     HStack {
-                        Text("Data: ")
+                        Text("Data: \(data ?? Date())")
+                        Spacer()
+                    }
+                }
+                
+                GroupBox {
+                    HStack {
+                        Text("Descrição: \(desc ?? "")")
                         Spacer()
                     }
                 }

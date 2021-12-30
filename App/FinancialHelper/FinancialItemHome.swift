@@ -9,28 +9,33 @@ import SwiftUI
 
 struct FinancialItemHome: View {
     
-    private var type : Int = 1
-    private var category : String = "Alimentação"
-    private var value : Double = 226.43
+    public var type : String?
+    public var value : String?
+    public var data : Date?
+    
+
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 
-                if type == 0 {
+//                Text("\(data ?? Date())")
+//                    .font(.subheadline)
+                
+                if type == "receita" {
                     Text("Receita").italic()
                         .foregroundColor(Color.green)
                 }
-                else if type == 1 {
-                    Text("Despesa - \(category)").italic()
+                else if type == "despesa" {
+                    Text("Despesa").italic()
                         .foregroundColor(Color.red)
                 }
-                else if type == 2 {
+                else if type == "poupanca" {
                     Text("Ganhos Poupaça").italic()
                         .foregroundColor(Color.yellow)
                 }
                 
-                Text("R$\(value.formatted())")
+                Text("R$\(value ?? "00.00")")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.primary)

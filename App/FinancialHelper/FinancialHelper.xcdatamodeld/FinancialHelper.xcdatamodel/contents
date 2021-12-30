@@ -1,45 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Despesas" representedClassName="Despesas" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="details" optional="YES" attributeType="String"/>
-        <attribute name="pagamento" optional="YES" attributeType="String"/>
-        <attribute name="parcela" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="parcelas" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-    </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="attribute" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
-    <entity name="Notification" representedClassName="Notification" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="details" optional="YES" attributeType="String"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
-    </entity>
-    <entity name="Poupanca" representedClassName="Poupanca" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-    </entity>
     <entity name="Receita" representedClassName="Receita" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="parcela" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="parcelas" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="type" optional="YES" attributeType="String"/>
-        <attribute name="value" optional="YES" attributeType="String"/>
-    </entity>
-    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
-        <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="moeda" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="password" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Despesas" positionX="84.14453125" positionY="-8.14453125" width="128" height="133"/>
-        <element name="Item" positionX="-220.35546875" positionY="-8.82421875" width="128" height="73"/>
-        <element name="Notification" positionX="-63" positionY="-9" width="128" height="74"/>
-        <element name="Poupanca" positionX="-54" positionY="63" width="128" height="59"/>
-        <element name="Receita" positionX="-45" positionY="72" width="128" height="104"/>
-        <element name="User" positionX="-36" positionY="108" width="128" height="89"/>
+        <element name="Item" positionX="-220.35546875" positionY="-8.82421875" width="128" height="44"/>
+        <element name="Receita" positionX="-216" positionY="0" width="128" height="44"/>
     </elements>
 </model>

@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct AddDespesaView: View {
+    @Environment(\.managedObjectContext) var moc
+    @StateObject private var dataController = DataController()
+    
     @State private var date : Date = Date()
     @State private var details : String = ""
     @State private var haveParcela : Bool = false
     @State private var arrParcelas : [Int] = [0]
-    @State private var parcela : Int = 0
+    @State private var parcela : Int64 = 0
     @State private var value : String = ""
     @State private var selectedPayment = Payment.boleto
     
@@ -23,7 +26,18 @@ struct AddDespesaView: View {
         var id : String {self.rawValue}
     }
     
-    func addReceita() {print(true)}
+    func addDespesa() {
+        let financial = Financial(context: moc)
+        financial.data = date
+        financial.id = UUID()
+        financial.parcelas = parcela
+        financial.type = "despesa"
+        financial.value = value
+        financial.desc = details
+        financial.paymentType = ""
+        
+        try? moc.save()
+    }
     
     func addParcelas() {
         for i in 0..<100 {
@@ -85,7 +99,7 @@ struct AddDespesaView: View {
                 
                 
                 Button("Salvar") {
-                    addReceita()
+                    addDespesa()
                 }
             }
         }
