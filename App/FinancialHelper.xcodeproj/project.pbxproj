@@ -11,11 +11,14 @@
 		9806A7112777856C00B2850E /* AddPoupancaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806A7102777856C00B2850E /* AddPoupancaView.swift */; };
 		9806A7132777869000B2850E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806A7122777869000B2850E /* SettingsView.swift */; };
 		9806A715277787DE00B2850E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806A714277787DE00B2850E /* ProfileView.swift */; };
+		98273692277F73C600F614CB /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98273691277F73C600F614CB /* SignInView.swift */; };
+		98273696277F789C00F614CB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98273695277F789C00F614CB /* SignUpView.swift */; };
+		982736A3277F868700F614CB /* FinancialData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 982736A1277F868700F614CB /* FinancialData.xcdatamodeld */; };
+		982736A6277F888300F614CB /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 982736A4277F888300F614CB /* UserData.xcdatamodeld */; };
 		9849B40E2776E81D00A05B38 /* NotificationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849B40D2776E81D00A05B38 /* NotificationListView.swift */; };
 		9849B4102776E88400A05B38 /* NotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849B40F2776E88400A05B38 /* NotificationItem.swift */; };
 		9849B41227776FCE00A05B38 /* SelectTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849B41127776FCE00A05B38 /* SelectTypeView.swift */; };
 		9849B4142777721A00A05B38 /* AddReceitaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9849B4132777721A00A05B38 /* AddReceitaView.swift */; };
-		98E2E0A7277E389800C06233 /* FinancialModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98E2E0A5277E389800C06233 /* FinancialModel.xcdatamodeld */; };
 		98E2E0AA277E397400C06233 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E2E0A9277E397400C06233 /* DataController.swift */; };
 		98E2E0AC277E52DF00C06233 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E2E0AB277E52DF00C06233 /* DashboardView.swift */; };
 		98F9BBB42776D611007B7356 /* FinancialHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F9BBB32776D611007B7356 /* FinancialHelperApp.swift */; };
@@ -31,11 +34,14 @@
 		9806A7102777856C00B2850E /* AddPoupancaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPoupancaView.swift; sourceTree = "<group>"; };
 		9806A7122777869000B2850E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9806A714277787DE00B2850E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		98273691277F73C600F614CB /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		98273695277F789C00F614CB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		982736A2277F868700F614CB /* FinancialData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinancialData.xcdatamodel; sourceTree = "<group>"; };
+		982736A5277F888300F614CB /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		9849B40D2776E81D00A05B38 /* NotificationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListView.swift; sourceTree = "<group>"; };
 		9849B40F2776E88400A05B38 /* NotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItem.swift; sourceTree = "<group>"; };
 		9849B41127776FCE00A05B38 /* SelectTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypeView.swift; sourceTree = "<group>"; };
 		9849B4132777721A00A05B38 /* AddReceitaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReceitaView.swift; sourceTree = "<group>"; };
-		98E2E0A6277E389800C06233 /* ReceitaModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceitaModel.xcdatamodel; sourceTree = "<group>"; };
 		98E2E0A9277E397400C06233 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		98E2E0AB277E52DF00C06233 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		98F9BBB02776D611007B7356 /* FinancialHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancialHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +75,8 @@
 		98E2E0A8277E389E00C06233 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				98E2E0A5277E389800C06233 /* FinancialModel.xcdatamodeld */,
+				982736A1277F868700F614CB /* FinancialData.xcdatamodeld */,
+				982736A4277F888300F614CB /* UserData.xcdatamodeld */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -133,6 +140,8 @@
 				9806A70E2777822000B2850E /* AddDespesaView.swift */,
 				9806A7102777856C00B2850E /* AddPoupancaView.swift */,
 				98E2E0AB277E52DF00C06233 /* DashboardView.swift */,
+				98273691277F73C600F614CB /* SignInView.swift */,
+				98273695277F789C00F614CB /* SignUpView.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -216,8 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982736A6277F888300F614CB /* UserData.xcdatamodeld in Sources */,
 				9806A70F2777822000B2850E /* AddDespesaView.swift in Sources */,
-				98E2E0A7277E389800C06233 /* FinancialModel.xcdatamodeld in Sources */,
 				9849B4142777721A00A05B38 /* AddReceitaView.swift in Sources */,
 				98F9BBCF2776D7CB007B7356 /* FinancialItemHome.swift in Sources */,
 				98F9BBD12776DD0B007B7356 /* FinancialDetailsView.swift in Sources */,
@@ -227,9 +236,12 @@
 				9806A715277787DE00B2850E /* ProfileView.swift in Sources */,
 				9806A7132777869000B2850E /* SettingsView.swift in Sources */,
 				98E2E0AA277E397400C06233 /* DataController.swift in Sources */,
+				982736A3277F868700F614CB /* FinancialData.xcdatamodeld in Sources */,
 				9849B41227776FCE00A05B38 /* SelectTypeView.swift in Sources */,
+				98273696277F789C00F614CB /* SignUpView.swift in Sources */,
 				98F9BBCC2776D67C007B7356 /* HomeView.swift in Sources */,
 				98F9BBB42776D611007B7356 /* FinancialHelperApp.swift in Sources */,
+				98273692277F73C600F614CB /* SignInView.swift in Sources */,
 				9849B4102776E88400A05B38 /* NotificationItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,13 +449,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		98E2E0A5277E389800C06233 /* FinancialModel.xcdatamodeld */ = {
+		982736A1277F868700F614CB /* FinancialData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				98E2E0A6277E389800C06233 /* ReceitaModel.xcdatamodel */,
+				982736A2277F868700F614CB /* FinancialData.xcdatamodel */,
 			);
-			currentVersion = 98E2E0A6277E389800C06233 /* ReceitaModel.xcdatamodel */;
-			path = FinancialModel.xcdatamodeld;
+			currentVersion = 982736A2277F868700F614CB /* FinancialData.xcdatamodel */;
+			path = FinancialData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		982736A4277F888300F614CB /* UserData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				982736A5277F888300F614CB /* UserData.xcdatamodel */,
+			);
+			currentVersion = 982736A5277F888300F614CB /* UserData.xcdatamodel */;
+			path = UserData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

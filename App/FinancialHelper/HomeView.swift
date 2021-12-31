@@ -12,9 +12,27 @@ struct HomeView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "data", ascending: false)]) var financial : FetchedResults<Financial>
     
+    @StateObject private var userController = UserController()
+    @StateObject private var dataController = DataController()
+    
     @State private var haveNotification : Bool = false
     @State private var isShowingNotifications : Bool = false
     @State private var isAdding : Bool = false
+    
+    func addUser() {
+        
+        let username = "Carlosamaral._"
+        let email = "Carlosabdoamaral@icloud.com"
+        let password = "Senha_admin123"
+        
+        let userModel = User(context: moc)
+        userModel.id = UUID()
+        userModel.username = username
+        userModel.email = email
+        userModel.password = password
+        
+        try? moc.save()
+    }
     
     var body: some View {
         NavigationView {
@@ -51,6 +69,9 @@ struct HomeView: View {
                     }
                 }
             }
+            .onAppear(perform: {
+                addUser()
+            })
             .navigationBarTitle("Menu")
             .navigationBarItems(
                 leading: HStack {

@@ -9,8 +9,12 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @StateObject private var dataController = DataController()
+    @FetchRequest(sortDescriptors: []) var user : FetchedResults<User>
+    
     @State private var selectedNotification = NotificationsType.Todas
     @State private var selectedCurrency = Currency.real
+    
     
     enum NotificationsType: String, Codable, Identifiable {
         case Todas
@@ -26,20 +30,28 @@ struct SettingsView: View {
         
         var id : String {self.rawValue}
     }
-    
+
     var body: some View {
         NavigationView {
             Form {
                 Section {
                     NavigationLink(destination: ProfileView()) {
                         VStack(alignment: .leading) {
-                            Text("Carlos Amaral")
-                                .font(.title3)
-                                .lineLimit(1)
-                            Text("carlosabdoamaral@icloud.com")
-                                .font(.body)
-                                .fontWeight(.light)
-                                .lineLimit(1)
+                            
+                            if user.count != 0 {
+                                
+                                ForEach(user) { u in
+                                    Text(u.username!)
+                                        .font(.title3)
+                                        .lineLimit(1)
+                                    Text(u.email!)
+                                        .font(.body)
+                                        .fontWeight(.light)
+                                        .lineLimit(1)
+                                }
+                            } else {
+                                Text("Erro")
+                            }
                         }
                     }
                     .padding(.vertical)
@@ -70,6 +82,7 @@ struct SettingsView: View {
                 
             }
             .navigationTitle("Ajustes")
+            .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
